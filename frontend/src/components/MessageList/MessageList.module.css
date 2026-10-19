@@ -1,0 +1,91 @@
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 32px 0 48px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  min-height: 0;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  height: 100%;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Loading container alignment */
+.loadingContainer {
+  display: flex;
+  padding: 0 32px;
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+.loadingAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  padding: 12px 0;
+}
+
+.loadingDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+.loadingDot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loadingDot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.emptyHint {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  max-width: 52ch;
+  line-height: 1.5;
+}

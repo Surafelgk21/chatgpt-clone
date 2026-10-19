@@ -1,0 +1,47 @@
+.message {
+  display: flex;
+  padding: 0 32px;
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 20px;
+}
+
+.message.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar.user {
+  background-color: #3b82f6;
+}
+
+.avatar.assistant {
+  background-color: #10a37f;
+}
+
+.content {
+  background-color: var(--bg-input);
+  padding: 14px 20px;
+  border-radius: 18px;
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+
+.message.assistant .content {
+  background-color: transparent;
+  padding: 0;
+  max-width: 100%;
+  white-space: normal;
+}
