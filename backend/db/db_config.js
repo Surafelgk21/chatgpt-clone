@@ -9,7 +9,11 @@ export const dbConfig = {
   database: process.env.DB_DATABASE,
   charset: "utf8mb4",
   connectTimeout: 10000,
-  ssl: process.env.DB_SSL === "true" ? { rejectUnauthorized: false } : undefined,
+ ssl: ["true", "required"].includes(
+  String(process.env.DB_SSL || "").toLowerCase()
+)
+  ? { rejectUnauthorized: false }
+  : undefined,
 };
 
 const db = mysql.createPool({
